@@ -1,0 +1,112 @@
+.customTooltip{
+	display: none;
+}
+.tooltipRight {
+	position: absolute;
+    background: $lighter;
+    border: 1px solid $accent;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px $darkest;
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.tooltipRight:after, #tooltipRight:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltipRight:after {
+	border-color: transparent;
+	border-right-color: $lighter;
+	border-width: 20px;
+	margin-top: -20px;
+}
+.tooltipRight:before {
+	border-color: transparent;
+	border-right-color: $accent;
+	border-width: 21px;
+	margin-top: -21px;
+}
+.tooltipLeft {
+	position: absolute;
+    background: $lighter;
+    border: 1px solid $accent;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px $darkest;
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+    font-size: 20px;
+}
+.tooltipLeft:after, #tooltipLeft:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltipLeft:after {
+	border-color: transparent;
+	border-left-color: $lighter;
+	border-width: 20px;
+	margin-top: -20px;
+}
+.tooltipLeft:before {
+	border-color: transparent;
+	border-left-color: $accent;
+	border-width: 21px;
+	margin-top: -21px;
+}
+.tooltipBottom {
+	position: absolute;
+    background: $lighter;
+    border: 1px solid $accent;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px $darkest;
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+    font-size: 20px;
+}
+.tooltipBottom:after, #tooltipBottom:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.tooltipBottom:after {
+	border-color: transparent;
+	border-bottom-color: $lighter;
+	border-width: 20px;
+	margin-left: -20px;
+}
+.tooltipBottom:before {
+	border-color: transparent;
+	border-bottom-color: $accent;
+	border-width: 21px;
+	margin-left: -21px;
+}

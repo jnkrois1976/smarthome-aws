@@ -1,0 +1,701 @@
+/* Bootstrap overides */
+header ul .btn.btn-link {
+  color: #81a2b3;
+}
+
+header ul .btn.btn-link:hover {
+  text-decoration: none;
+}
+
+.btn.btn-link {
+  color: #13273e;
+}
+
+.badge-primary {
+  background-color: #1593b2;
+  color: #d6f1fc;
+}
+
+.btn-primary, .btn-primary:hover {
+  color: #d6f1fc;
+  background-color: #1593b2;
+  border-color: #1593b2;
+}
+
+.tooltip.bs-tooltip-top {
+  color: #d6f1fc;
+}
+
+.tooltip.bs-tooltip-top .tooltip-inner {
+  background-color: #1593b2;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: #1593b2;
+}
+
+/* Bootstrap overides */
+/* Rules for sizing the icon. */
+.material-icons {
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-accent {
+  color: #1593b2;
+}
+
+.material-icons.md-dark {
+  color: #13273e;
+}
+
+.material-icons.md-dark.disabled {
+  color: rgba(19, 39, 62, 0.3);
+  cursor: not-allowed;
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: #d6f1fc;
+}
+
+.material-icons.md-light.disabled {
+  color: rgba(214, 241, 252, 0.3);
+  cursor: not-allowed;
+}
+
+/* Rules for svg icons */
+[class^="icon-"], [class*=" icon-"] {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  fill: #1593b2;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #13273e;
+}
+
+body.homepage {
+  background-image: url(/dist/img/home_bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.configure .selectedItem {
+  font-size: 60%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 120px auto 200px;
+}
+
+body header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20px 100px;
+}
+
+body header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+body header nav ul li a {
+  margin-right: 20px;
+}
+
+body header div {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+body.homepage {
+  grid-template-columns: 1fr;
+}
+
+body.homepage main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.configure main > div {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+body.configure main > div > div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
+  grid-row-gap: 20px;
+}
+
+body.configure main > div > div h2 {
+  border-bottom: solid 1px #1593b2;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+body.configure main > div > div h2:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+body.configure main > div > div h2:nth-child(2) {
+  text-align: right;
+  grid-column-start: 4;
+  grid-column-end: span 6;
+  justify-content: flex-end;
+}
+
+body.configure main > div > div h2:nth-child(2) div {
+  display: flex;
+  align-items: center;
+}
+
+body.configure main > div > div.sortIcons {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+body.configure main > div > div.sortIcons svg {
+  margin: 0 auto 20px;
+}
+
+body.configure main > div > div#hubSelectionContent {
+  justify-content: space-between;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  position: relative;
+}
+
+body.configure main > div > div#hubSelectionContent .card {
+  width: 100% !important;
+}
+
+body.configure main > div > div#voiceSelectionContent {
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  position: relative;
+}
+
+body.configure main > div > div#voiceSelectionContent .card {
+  width: 100% !important;
+}
+
+body.configure main > div > div#voiceSelectionContent .card img {
+  max-width: 60%;
+  margin-top: 30px;
+}
+
+body.configure main > div > div#devicesSelectionContent {
+  justify-content: space-between;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  position: relative;
+}
+
+body.configure main > div > div#devicesSelectionContent .card {
+  width: auto;
+}
+
+body.configure main > div > div#devicesSelectionContent .card img {
+  max-width: 60%;
+  margin-top: 30px;
+}
+
+body:not(.homepage) {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+body:not(.homepage) header, body:not(.homepage) footer {
+  grid-column-start: 1;
+  grid-column-end: 13;
+}
+
+body:not(.homepage) main {
+  grid-column-start: 2;
+  grid-column-end: span 10;
+}
+
+.configure .catPanel {
+  display: none;
+}
+
+.configure .catPanel.expanded {
+  display: grid !important;
+}
+
+.configure .card {
+  border-color: #1593b2;
+  transition: background-color 200ms ease-in;
+  border-radius: 0;
+}
+
+.configure .card img {
+  width: 90%;
+  height: auto;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.configure .card .card-body .btn-primary.focus, .configure .card .card-body .btn-primary:focus {
+  box-shadow: none;
+}
+
+.configure .card .card-body .selectCard i {
+  display: none;
+}
+
+.configure .card.selected {
+  background-color: #13273e;
+  color: #d6f1fc;
+}
+
+.configure .card.selected .card-body .selectCard i {
+  display: block;
+  line-height: 20px;
+}
+
+.configure .card.selected .card-body .selectCard > span > span {
+  display: inline;
+}
+
+.configure .card .moreInfo {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.configure .card .moreInfo:not(.active) {
+  border-right: solid 1px #81a2b3;
+  border-left: solid 1px #81a2b3;
+}
+
+.configure .card .moreInfo .btn-light.focus, .configure .card .moreInfo .btn-light:focus {
+  box-shadow: none;
+}
+
+.configure .card .moreInfo button > span:before {
+  content: "Show More Info";
+}
+
+.configure .card .moreInfo button > span::after {
+  content: "Show Less Info";
+  display: none;
+}
+
+.configure .card .moreInfo button + span {
+  position: absolute;
+  background-color: #d6f1fc;
+  display: none;
+  width: 100%;
+  box-sizing: content-box;
+  left: -1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent #81a2b3 transparent #81a2b3;
+  height: 15px;
+  z-index: 2;
+}
+
+.configure .card .moreInfo button i {
+  transition: transform 200ms ease-in-out;
+  line-height: 20px;
+}
+
+.configure .card .moreInfo button.active {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #81a2b3 transparent transparent transparent;
+  color: #3e5560;
+  background-color: #d6f1fc;
+}
+
+.configure .card .moreInfo button.active > span::before {
+  display: none;
+}
+
+.configure .card .moreInfo button.active > span::after {
+  display: inline;
+}
+
+.configure .card .moreInfo button.active + span {
+  display: block;
+}
+
+.configure .card .moreInfo button.active i {
+  transform: rotate(-180deg);
+}
+
+.configure .card-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.configure .btn-lg {
+  border-radius: 0;
+  border-top: solid 1px #81a2b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.configure .btn-lg > span > span {
+  display: none;
+}
+
+.configure .expandable {
+  width: 100%;
+  border: solid 1px #81a2b3;
+  background-color: #d6f1fc;
+  padding: 20px;
+  margin: 20px 0 0;
+  display: none;
+  color: #13273e;
+}
+
+.configure .expandable.expanded {
+  display: block;
+  margin-top: 0;
+}
+
+.configure .panelActions {
+  visibility: hidden;
+}
+
+.configure .panelActions.active {
+  visibility: visible;
+}
+
+.configure .moreInfoBtn + span {
+  height: 15px;
+}
+
+#hubSelection .expandable.expanded {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+#voiceSelection .expandable.expanded {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+#devicesSelection .expandable.expanded {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body.configure main h1 {
+    font-size: 1.5rem;
+  }
+  body.configure main h2 {
+    font-size: 1.25rem;
+  }
+  body.configure main > div .panelActions.active {
+    display: none;
+  }
+  body.configure main > div#hubSelection .expandable {
+    display: none;
+  }
+  body.configure main > div > div h2:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+  }
+  body.configure main > div > div h2:nth-child(2) {
+    grid-column-start: 5;
+    grid-column-end: span 6;
+  }
+  body.configure main > div > div.catPanel {
+    grid-template-columns: auto !important;
+  }
+  body.configure main > div#devicesSelection > div.sortIcons {
+    grid-template-columns: repeat(4, 80px) !important;
+    grid-template-rows: auto auto;
+  }
+  body.configure main > div#devicesSelection > div.sortIcons svg {
+    width: 40px;
+    height: 40px;
+  }
+  body.configure .card .moreInfo {
+    display: none;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body.configure main h1 {
+    font-size: 1.5rem;
+  }
+  body.configure main h2 {
+    font-size: 1.25rem;
+  }
+  body.configure main h4 {
+    font-size: 1rem;
+  }
+  body.configure main > div .panelActions.active {
+    display: none;
+  }
+  body.configure main > div#hubSelection .expandable {
+    display: none;
+  }
+  body.configure main > div#devicesSelection > div:nth-child(2) {
+    grid-template-columns: auto;
+  }
+  body.configure main > div#devicesSelection > div:nth-child(4) {
+    grid-template-columns: auto;
+  }
+  body.configure main > div > div h2:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: span 4;
+  }
+  body.configure main > div > div h2:nth-child(2) {
+    grid-column-start: 5;
+    grid-column-end: span 6;
+  }
+  body.configure main > div > div#hubSelectionContent.catPanel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body.configure main > div > div#devicesSelectionContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body.configure main > div#devicesSelection > div.sortIcons {
+    grid-template-columns: repeat(8, 80px) !important;
+    grid-template-rows: auto;
+  }
+  body.configure main > div#devicesSelection > div.sortIcons svg {
+    width: 40px;
+    height: 40px;
+  }
+  body.configure .card .moreInfo {
+    display: none;
+  }
+}
+
+svg > g > g path, svg > g > a > g path {
+  fill: #d6f1fc;
+  transition: 100ms fill ease-in;
+}
+
+svg > g > path, svg > g > a > path {
+  fill: rgba(62, 85, 96, 0.8);
+  transition: 100ms fill ease-in;
+}
+
+svg > g > a:hover > path {
+  fill: #13273e;
+}
+
+svg #configure a {
+  fill: rgba(21, 147, 178, 0.85);
+  transition: 100ms fill ease-in;
+}
+
+svg > #configure > a > g > path {
+  fill: #d6f1fc;
+  transition: 100ms fill ease-in;
+}
+
+svg > #configure > a:hover > g > path {
+  fill: #d6f1fc;
+}
+
+svg #configure a:hover {
+  fill: #13273e;
+}
+
+.selectedIcon {
+  color: #1593b2;
+}
+
+header {
+  background-color: rgba(62, 85, 96, 0.9);
+  border-bottom: solid 1px #1593b2;
+}
+
+header a:link, header a:visited, header a:active {
+  color: #d6f1fc;
+  text-decoration: none;
+}
+
+footer {
+  border-top: solid 1px #1593b2;
+  background-color: #13273e;
+}
+
+.customTooltip {
+  display: none;
+}
+
+.tooltipRight {
+  position: absolute;
+  background: #d6f1fc;
+  border: 1px solid #1593b2;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+  display: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.tooltipRight:after, #tooltipRight:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tooltipRight:after {
+  border-color: transparent;
+  border-right-color: #d6f1fc;
+  border-width: 20px;
+  margin-top: -20px;
+}
+
+.tooltipRight:before {
+  border-color: transparent;
+  border-right-color: #1593b2;
+  border-width: 21px;
+  margin-top: -21px;
+}
+
+.tooltipLeft {
+  position: absolute;
+  background: #d6f1fc;
+  border: 1px solid #1593b2;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+  display: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+  font-size: 20px;
+}
+
+.tooltipLeft:after, #tooltipLeft:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tooltipLeft:after {
+  border-color: transparent;
+  border-left-color: #d6f1fc;
+  border-width: 20px;
+  margin-top: -20px;
+}
+
+.tooltipLeft:before {
+  border-color: transparent;
+  border-left-color: #1593b2;
+  border-width: 21px;
+  margin-top: -21px;
+}
+
+.tooltipBottom {
+  position: absolute;
+  background: #d6f1fc;
+  border: 1px solid #1593b2;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+  display: none;
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+  font-size: 20px;
+}
+
+.tooltipBottom:after, #tooltipBottom:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.tooltipBottom:after {
+  border-color: transparent;
+  border-bottom-color: #d6f1fc;
+  border-width: 20px;
+  margin-left: -20px;
+}
+
+.tooltipBottom:before {
+  border-color: transparent;
+  border-bottom-color: #1593b2;
+  border-width: 21px;
+  margin-left: -21px;
+}
+
+.hidden {
+  visibility: hidden;
+}

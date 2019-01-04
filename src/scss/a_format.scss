@@ -1,0 +1,99 @@
+@import 'palette';
+/* Bootstrap overides */
+header{
+    ul{
+        .btn{
+            &.btn-link{
+                color: $light;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.btn.btn-link{
+    color: $darker;
+}
+.badge-primary{
+    background-color: $accent;
+    color: $lighter;
+}
+.btn-primary, .btn-primary:hover {
+    color: $lighter;
+    background-color: $accent;
+    border-color: $accent;
+}
+.tooltip.bs-tooltip-top{
+    .tooltip-inner{
+        background-color: $accent;
+    }
+    color: $lighter;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before{
+    border-top-color: $accent;
+}
+/* Bootstrap overides */
+/* Rules for sizing the icon. */
+.material-icons{ 
+    line-height: 28px;
+    cursor: pointer;
+}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-accent { 
+    color: $accent;
+}
+.material-icons.md-dark { 
+    color: rgba($darker, 1);
+}
+.material-icons.md-dark.disabled { 
+    color: rgba($darker, 0.3); 
+    cursor: not-allowed;
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { 
+    color: rgba($lighter, 1); 
+}
+.material-icons.md-light.disabled { 
+    color: rgba($lighter, 0.3); 
+    cursor: not-allowed;
+}
+/* Rules for svg icons */
+[class^="icon-"], [class*=" icon-"] {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    fill: $accent;
+}
+html{
+    overflow-y: scroll;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: $darker;
+    &.homepage{
+        background-image: url(/dist/img/home_bg2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.configure{
+    .selectedItem{
+        font-size: 60%;
+    }
+}

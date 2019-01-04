@@ -1,0 +1,26 @@
+{
+  "name": "smarthome",
+  "version": "1.0.0",
+  "description": "Home Automation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnkrois1976/ci_tempalte.git"
+  },
+  "author": "Juan C Rois",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnkrois1976/ci_tempalte/issues"
+  },
+  "homepage": "https://github.com/jnkrois1976/ci_tempalte#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
+  }
+}

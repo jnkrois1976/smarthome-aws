@@ -1,0 +1,438 @@
+@import 'palette';
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: grid;
+    grid-template-rows: 120px auto 200px;
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 100px;
+        nav{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            align-items: center;
+            ul{
+                li{
+                    a{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: top;
+        }
+    }
+    &.homepage{
+        grid-template-columns: 1fr;
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &.configure{
+        main{
+            > div{
+                margin-bottom: 20px;
+                width: 100%;
+                position: relative;
+                > div{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: auto auto;
+                    grid-row-gap: 20px;
+                    h2{
+                        border-bottom: solid 1px $accent;
+                        margin-bottom: 0;
+                        padding-bottom: 5px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    h2:nth-child(1){
+                        grid-column-start: 1;
+                        grid-column-end: span 3;
+                    }
+                    h2:nth-child(2){
+                        text-align: right;
+                        grid-column-start: 4;
+                        grid-column-end: span 6;
+                        justify-content: flex-end;
+                        div{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+                > div.sortIcons{
+                    grid-template-columns: repeat(8, 1fr);
+                    svg{
+                        margin: 0 auto 20px;
+                    }
+                }
+                > div#hubSelectionContent{
+                    justify-content: space-between;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: auto;
+                    grid-gap: 15px;
+                    position: relative;
+                    .card{
+                        width: 100%!important;
+                    }
+                }
+                > div#voiceSelectionContent{
+                    justify-content: space-between;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: auto;
+                    grid-gap: 15px;
+                    position: relative;
+                    .card{
+                        img{
+                            max-width: 60%;
+                            margin-top: 30px;
+                        }
+                        width: 100%!important;
+                    }
+                }
+                > div#devicesSelectionContent{
+                    justify-content: space-between;
+                    grid-template-columns: repeat(6, 1fr);
+                    grid-template-rows: auto;
+                    grid-gap: 15px;
+                    position: relative;
+                    .card{
+                        img{
+                            max-width: 60%;
+                            margin-top: 30px;
+                        }
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    &:not(.homepage){
+        grid-template-columns: repeat(12, 1fr);
+        header, footer{
+            grid-column-start: 1;
+            grid-column-end: 13;
+        }
+        main{
+            grid-column-start: 2;
+            grid-column-end: span 10;
+        }
+    }
+}
+
+.configure{
+    .catPanel{
+        display: none;
+        &.expanded{
+            display: grid!important;
+        }
+    }
+    .card{
+        border-color: $accent;
+        transition: background-color 200ms ease-in;
+        img{
+            width: 90%;
+            height: auto;
+            align-self: center;
+            margin-top: 10px;
+        }
+        .card-body{
+            .btn-primary.focus, .btn-primary:focus {
+                box-shadow: none;
+            }
+            .selectCard{
+                i{
+                    display: none;
+                }
+            }
+        }
+        &.selected{
+            background-color: $darker;
+            color: $lighter;
+            .card-body{
+                .selectCard{
+                    i{
+                        display: block;
+                        line-height: 20px;
+                    }
+                    > span{
+                        > span{
+                            display: inline;
+                        }
+                    }
+                }
+            }  
+        }
+        border-radius: 0;
+        .moreInfo{
+            margin-left: -1px;
+            margin-right: -1px;
+            &:not(.active){
+                border-right: solid 1px $light;
+                border-left: solid 1px $light;
+            }
+            .btn-light.focus, .btn-light:focus{
+                box-shadow: none;
+            }
+            button{
+                > span:before{
+                    content: "Show More Info";
+                }
+                > span::after{
+                    content: "Show Less Info";
+                    display: none;
+                }
+                + span{
+                    position: absolute;
+                    background-color: $lighter;
+                    display: none;
+                    width: 100%;
+                    box-sizing: content-box;
+                    left: -1px;
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color: transparent $light transparent $light;
+                    height: 15px;
+                    z-index: 2;
+                    
+                }
+                i{
+                    transition: transform 200ms ease-in-out;
+                    line-height: 20px; 
+                }
+                &.active{
+                    > span::before{
+                        display: none;
+                    }
+                    > span::after{
+                        display: inline;
+                    }
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color: $light transparent transparent transparent;
+                    color: $dark;
+                    background-color: $lighter;
+                    + span{
+                        display: block;
+                    }
+                    i{
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+    .card-body{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    .btn-lg{
+        border-radius: 0;
+        border-top: solid 1px $light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > span{
+            > span{
+                display: none;
+            }
+        }
+    }
+    .expandable{
+        width: 100%;
+        border: solid 1px $light;
+        background-color: $lighter;
+        padding: 20px;
+        margin: 20px 0 0;
+        display: none;
+        color: $darker;
+        &.expanded{
+            display: block;
+            margin-top: 0;
+        }
+    }
+    .panelActions{
+        visibility: hidden;
+        &.active{
+            visibility: visible;
+        }
+    }
+    .moreInfoBtn{
+        + span{
+            height: 15px;
+        }
+    }
+}
+#hubSelection, {
+    .expandable{
+        &.expanded{
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+    }
+}
+#voiceSelection {
+    .expandable{
+        &.expanded{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+}
+#devicesSelection {
+    .expandable{
+        &.expanded{
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+    }
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body{
+        &.configure{
+            main{
+                h1{
+                    font-size: 1.5rem;
+                }
+                h2{
+                    font-size: 1.25rem;
+                }
+                > div{
+                    .panelActions{
+                        &.active{
+                            display: none;
+                        }
+                    }
+                    &#hubSelection{
+                        .expandable{
+                            display: none;
+                        }
+                    }
+                    > div {
+                        h2{
+                            &:nth-child(1){
+                                grid-column-start: 1;
+                                grid-column-end: span 4;
+                            }
+                            &:nth-child(2){
+                                grid-column-start: 5;
+                                grid-column-end: span 6;
+                            }
+                        }
+                        &.catPanel{
+                            grid-template-columns: auto!important;
+                        }
+                    }
+                    &#devicesSelection{
+                        > div{
+                            &.sortIcons{
+                                grid-template-columns: repeat(4, 80px)!important;
+                                grid-template-rows: auto auto;
+                                svg{
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .card{
+                .moreInfo{
+                    display: none;
+                }
+            }
+        }   
+    }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    body{
+        &.configure{
+            main{
+                h1{
+                    font-size: 1.5rem;
+                }
+                h2{
+                    font-size: 1.25rem;
+                }
+                h4{
+                    font-size: 1rem;
+                }
+                > div{
+                    .panelActions{
+                        &.active{
+                            display: none;
+                        }
+                    }
+                    &#hubSelection{
+                        .expandable{
+                            display: none;
+                        }
+                    }
+                    &#devicesSelection{
+                        > div{
+                            &:nth-child(2){
+                                grid-template-columns: auto;
+                            }
+                            &:nth-child(4){
+                                grid-template-columns: auto;
+                            }
+                        }
+                    }
+                    > div {
+                        h2{
+                            &:nth-child(1){
+                                grid-column-start: 1;
+                                grid-column-end: span 4;
+                            }
+                            &:nth-child(2){
+                                grid-column-start: 5;
+                                grid-column-end: span 6;
+                            }
+                        }
+                        &#hubSelectionContent{
+                            &.catPanel{
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                        }
+                        &#devicesSelectionContent{
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                    &#devicesSelection{
+                        > div{
+                            &.sortIcons{
+                                grid-template-columns: repeat(8, 80px)!important;
+                                grid-template-rows: auto;
+                                svg{
+                                    width: 40px;
+                                    height: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .card{
+                .moreInfo{
+                    display: none;
+                }
+            }
+        }   
+    }
+}
+
+

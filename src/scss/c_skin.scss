@@ -1,0 +1,41 @@
+@import 'palette';
+svg > g > g path, svg > g > a > g path{
+    fill: $lighter;
+    transition: 100ms fill ease-in;
+}
+svg > g > path, svg > g > a > path{
+    fill: rgba($dark,0.8);
+    transition: 100ms fill ease-in;
+}
+svg > g > a:hover > path {
+    fill: $darker;
+}
+svg #configure a{
+    fill: rgba($accent,0.85);
+    transition: 100ms fill ease-in;
+}
+svg > #configure > a > g > path{
+    fill: $lighter;
+    transition: 100ms fill ease-in;
+}
+svg > #configure > a:hover > g > path{
+    fill: $lighter;
+}
+svg #configure a:hover{
+    fill: $darker;
+}
+.selectedIcon{
+    color: $accent;
+}
+header{
+    background-color: rgba($dark, 0.90);
+    border-bottom: solid 1px $accent;
+    a:link, a:visited, a:active{
+        color: $lighter;
+        text-decoration: none;
+    }
+}
+footer{
+    border-top: solid 1px $accent;
+    background-color: $darker;
+}
